@@ -61,7 +61,10 @@ if bg_img:
     """, unsafe_allow_html=True)
 
 # Configure the Gemini API key
-genai.configure(api_key="AIzaSyASZINhUQHKEe4EE_w94ZsniPe_jCNVV1k")
+api_key=st.secrets["bilal_api"]
+
+# Configure Gemini API key
+genai.configure(api_key=api_key)
 
 # Text-to-speech function using gTTS
 def speak(text):
